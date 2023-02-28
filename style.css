@@ -1,0 +1,434 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  font-family: "Lato", sans-serif;
+}
+
+/****Navbar Stuff****/
+.navbar-wrap {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  padding: 10px;
+  z-index: 5;
+}
+.navbar a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.navbar a span {
+  color: rgb(225, 225, 225);
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.navbar a .logo {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 30px;
+}
+.navbar .nav-links a {
+  font-weight: 900;
+  color: rgb(225, 225, 225);
+  font-size: 0.75em;
+}
+
+.hero {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(assets/hero.jpg);
+}
+.hero .intro-wrapper {
+  margin: auto;
+  height: 100%;
+  max-width: 80%;
+  display: flex;
+  text-align: center;
+  align-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  gap: 90px;
+}
+.hero .intro-wrapper h1 {
+  display: inline-block;
+  font-size: 3em;
+  color: rgb(225, 225, 225);
+  font-weight: 300;
+  padding-bottom: 200px;
+  filter: drop-shadow(16px 16px 10px black);
+}
+.hero .intro-wrapper p {
+  display: inline-block;
+  font-size: 1.5em;
+  color: rgb(225, 225, 225);
+  font-weight: 300;
+  padding-bottom: 50px;
+  filter: drop-shadow(16px 16px 10px black);
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: rgb(21, 84, 44);
+  z-index: 5;
+  max-width: 100%;
+}
+
+/****Section 1 - Locations****/
+.locations {
+  height: 90vh;
+  position: relative;
+}
+.locations .locations-info {
+  max-width: 1000px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.locations .locations-info h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  color: rgb(21, 84, 44);
+  font-size: 8.4em;
+  margin: 0;
+  padding-left: 30px;
+}
+.locations .locations-info h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  color: rgb(21, 84, 44);
+  position: absolute;
+  top: 63px;
+  left: 88px;
+}
+.locations .locations-info p {
+  font-weight: bold;
+  margin: auto;
+  max-width: 800px;
+  padding: 10px 10px;
+  color: black;
+}
+.locations .carousel {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(assets/woods1.jpg);
+}
+.locations .preview-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  z-index: 1;
+}
+.locations .preview-wrap .preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.locations .preview-wrap .preview .preview-img {
+  width: 150px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.locations .preview-wrap .dot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 10px;
+  padding-top: 3px;
+}
+.locations .preview-wrap .dot-container .dot {
+  height: 8px;
+  width: 8px;
+  background-color: grey;
+  border-radius: 50%;
+}
+.locations .preview-wrap .dot-container .dot-highlighted {
+  background-color: rgb(225, 225, 225);
+}
+.locations .fade {
+  animation: 1.5s fade;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.locations .highlighted {
+  border: 2px solid grey;
+}
+
+/****Section 2 - Vacation Packages****/
+.vacation-packages {
+  background-color: rgb(225, 225, 225);
+}
+.vacation-packages .vacation-packages-info {
+  max-width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 50px;
+}
+.vacation-packages .vacation-packages-info h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  color: rgb(21, 84, 44);
+  font-size: 8.4em;
+  margin: 0;
+  padding-right: 260px;
+}
+.vacation-packages .vacation-packages-info h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  color: rgb(21, 84, 44);
+  position: absolute;
+  top: 63px;
+  left: 77px;
+}
+.vacation-packages .vacation-packages-info p {
+  font-weight: 300;
+  margin: auto;
+  width: 700px;
+  padding: 0 10px;
+  text-align: left;
+}
+.vacation-packages .tabs {
+  margin-top: 20px;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(21, 84, 44);
+}
+.vacation-packages .tabs .tab-flex {
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1000px;
+  height: 100%;
+  align-items: baseline;
+}
+.vacation-packages .tabs .tab-flex .tab {
+  height: 100%;
+  padding: 0 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75em;
+  color: rgb(225, 225, 225);
+  cursor: pointer;
+}
+.vacation-packages .tabs .tab-flex .tab-selected {
+  background-color: rgb(225, 225, 225);
+  color: rgb(21, 84, 44);
+  text-decoration: underline;
+}
+.vacation-packages .schedule-section {
+  height: 550px;
+  width: 100%;
+}
+.vacation-packages .schedule-section .schedule {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.vacation-packages .schedule-section .schedule .max-width {
+  max-width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vacation-packages .schedule-section .schedule .max-width .timecard {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  min-width: 180px;
+  background-color: rgb(225, 225, 225);
+  padding: 20px;
+  border-radius: 2px;
+}
+.vacation-packages .schedule-section .schedule .max-width .timecard h1 {
+  margin-top: -6px;
+  width: 100%;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  color: rgb(21, 84, 44);
+}
+.vacation-packages .schedule-section .schedule .max-width .timecard .grid {
+  padding-left: 3px;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 4px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.vacation-packages .schedule-section .schedule .max-width .timecard .grid span {
+  font-weight: 300;
+  color: black;
+}
+.vacation-packages .schedule-section .schedule .img-wrap {
+  width: 100%;
+  height: 100%;
+}
+.vacation-packages .schedule-section .schedule .img-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+}
+.vacation-packages .schedule-section .hidden {
+  visibility: hidden;
+  display: none;
+}
+
+hr {
+  visibility: hidden;
+  display: none;
+}
+
+.label {
+  visibility: hidden;
+  display: none;
+}
+
+/****Footer Section****/
+footer {
+  background-color: rgb(21, 84, 44);
+  height: 60px;
+  z-index: 6;
+  position: relative;
+}
+footer .footer-wrap {
+  height: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: auto;
+}
+footer .footer-wrap .logo {
+  width: 25px;
+  height: 25px;
+}
+footer .footer-wrap a {
+  margin-top: 4px;
+}
+footer .footer-wrap .copyright {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.75em;
+  color: rgb(225, 225, 225);
+}
+
+/****Mobile-friendly Section (including Accordion Menu)****/
+@media screen and (max-width: 700px) {
+  .sticky-nav {
+    visibility: hidden;
+    display: none;
+  }
+  .nav-links {
+    visibility: hidden;
+    display: none;
+  }
+  .accordion-element {
+    position: relative;
+  }
+  .accordion-element .label-wrapper {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+  .accordion-element .label-wrapper .label {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    visibility: visible !important;
+    display: inline-block !important;
+    font-weight: bold;
+    color: rgb(21, 84, 44);
+    font-size: 1.6em;
+  }
+  .accordion-element .label-wrapper .label::after {
+    content: "+";
+    position: absolute;
+    right: 30px;
+  }
+  .accordion-element section {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .accordion-element.active section {
+    height: 80vh;
+  }
+  .accordion-element.active .label::after {
+    content: "-";
+    height: 30px;
+  }
+  .accordion-element hr {
+    visibility: visible !important;
+    display: block !important;
+    width: 100;
+    margin: 0;
+  }
+  .preview-wrap {
+    height: 30px !important;
+  }
+  .preview-wrap .preview {
+    display: none !important;
+  }
+  .timecard {
+    top: 30px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+  }
+  .schedule-section {
+    height: 450px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

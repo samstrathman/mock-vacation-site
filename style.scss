@@ -1,0 +1,490 @@
+$primaryColor: rgb(21, 84, 44);
+$lightColor: rgb(225, 225, 225);
+$headerFont: 'Oswald', sans-serif; 
+
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: auto;
+    font-family: 'Lato', sans-serif; 
+}
+
+/****Navbar Stuff****/
+.navbar-wrap {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    
+    padding: 10px;
+    z-index: 5;
+
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        span {
+            color: $lightColor;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        .logo {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+
+        a {               
+            font-weight: 900;
+            color: $lightColor;
+            font-size:  0.75em;
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(assets/hero.jpg);
+
+    .intro-wrapper {
+        margin: auto;
+        height: 100%;
+        max-width: 80%;
+        display: flex;
+        text-align: center;
+        align-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        gap: 90px;
+
+        h1 {
+            display: inline-block;
+            font-size: 3em;
+            color: $lightColor;
+            font-weight: 300;
+            padding-bottom: 200px;
+            filter: drop-shadow(16px 16px 10px black);
+        }
+        p {
+            display: inline-block;
+            font-size: 1.5em;
+            color: $lightColor;
+            font-weight: 300;
+            padding-bottom: 50px;
+            filter: drop-shadow(16px 16px 10px black);
+        }
+    }
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgb(21, 84, 44);
+    z-index: 5;
+    max-width: 100%;
+}
+
+/****Section 1 - Locations****/
+.locations {
+    height: 90vh;
+    position: relative;
+
+    .locations-info {
+        max-width: 1000px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        
+        h1 {
+            font-family: $headerFont;
+            text-align: left;
+            color: $primaryColor;
+            font-size: 8.4em;
+            margin: 0;
+            padding-left: 30px;
+        } 
+        h2 {
+            font-family: $headerFont;
+            font-size: 2em;
+            color: $primaryColor;
+            position: absolute;
+            top: 63px;
+            left: 88px;
+        }
+        p {
+            font-weight: bold;
+            margin: auto;
+            max-width: 800px;
+            padding: 10px 10px;
+            color: black;
+        }
+    }
+
+    .carousel {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(assets/woods1.jpg);
+    }
+
+    .preview-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+        z-index: 1;
+
+        .preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .preview-img {
+                width: 150px;
+                height: 100px;
+                background-position: center;
+                background-size: cover;
+                cursor: pointer;
+            }            
+        }
+
+        .dot-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            height: 10px;
+            padding-top: 3px;
+
+            .dot {
+                height: 8px;
+                width: 8px;
+                background-color: grey;
+                border-radius: 50%;
+            }
+            .dot-highlighted {
+                background-color: $lightColor;
+            }
+        }
+    }
+    .fade {
+        -webkit-animation: 1.5s fade;
+        animation: 1.5s fade;
+    }
+
+    @-webkit-keyframes fade {
+        0% {opacity: 0.4}
+        100% {opacity: 1}
+    }
+    @keyframes fade {
+        0% {opacity: 0.4}
+        100% {opacity: 1}
+    }
+
+    .highlighted {
+        border: 2px solid grey;
+    }
+}
+
+/****Section 2 - Vacation Packages****/
+.vacation-packages {
+    background-color: $lightColor;
+
+    .vacation-packages-info {
+        max-width: 1000px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0 50px;
+        
+        h1 {
+            font-family: $headerFont;
+            text-align: left;
+            color: $primaryColor;
+            font-size: 8.4em;
+            margin: 0;
+            padding-right: 260px;
+        } 
+        h2 {
+            font-family: $headerFont;
+            font-size: 2em;
+            color: $primaryColor;
+            position: absolute;
+            top: 63px;
+            left: 77px;
+        }
+        p {
+            font-weight: 300;
+            margin: auto;
+            width: 700px;
+            padding: 0 10px;
+            text-align: left;
+        }
+    }
+
+    .tabs {
+        margin-top: 20px;
+        width: 100%;
+        height: 45px;
+        background-color: $primaryColor;
+
+        .tab-flex {
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            max-width: 1000px;
+            height: 100%;
+            align-items: baseline;
+
+            .tab {
+                height: 100%;
+                padding: 0 10px;
+                font-family: $headerFont; 
+                font-size: 1.75em;
+                color: $lightColor;
+                cursor: pointer;
+            }
+
+            .tab-selected {
+                background-color: $lightColor;
+                color: $primaryColor;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .schedule-section {
+        height: 550px;  
+        width: 100%;   
+
+        .schedule {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            text-align: center;
+
+            .max-width {
+                max-width: 1000px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+
+                .timecard {
+                    position: absolute;
+                    top: 100px;
+                    left: 50px;
+                    min-width: 180px;
+                    background-color: $lightColor;
+                    padding: 20px;
+                    border-radius: 2px;
+
+                    h1 {
+                        margin-top: -6px;
+                        width: 100%;
+                        text-align: left;
+                        font-family: $headerFont;
+                        font-size: 2em;
+                        color: $primaryColor;
+                    }
+                    .grid {
+                        padding-left: 3px;
+                        display: grid;
+                        width: 100%;
+                        justify-items: center;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr 1fr;
+                        row-gap: 4px;
+                        column-gap: 15px;
+
+                        span {
+                            font-weight: 300;
+                            color: black;    
+                        }
+                    }
+                }
+            }
+
+            .img-wrap {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    top: 100px;
+                }
+            }
+        }
+        .hidden {
+            visibility: hidden;
+            display: none;
+        }
+    }
+}
+
+hr {
+    visibility: hidden;
+    display: none;
+}
+
+//hide accordion labels 
+.label {
+    visibility: hidden;
+    display: none;
+}
+
+/****Footer Section****/
+footer {
+    background-color: $primaryColor;
+    height: 60px;
+    z-index: 6;
+    position: relative;
+
+    .footer-wrap {
+        height: 100%;
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        margin: auto;
+
+        .logo {
+            width: 25px;
+            height: 25px;
+        }
+        
+        a {
+            margin-top: 4px;
+        }
+
+        .copyright {
+            font-style: italic;
+            font-weight:lighter;
+            font-size: .75em;
+            color: $lightColor;
+        }
+    }
+}
+
+/****Mobile-friendly Section (including Accordion Menu)****/
+@media screen and (max-width: 700px) {
+    .sticky-nav {
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav-links{
+        visibility: hidden;
+        display: none;
+    }
+
+    .accordion-element {
+        position: relative;
+            
+        .label-wrapper {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+
+            .label {
+                width: 100%;
+                position: relative;
+                cursor: pointer;
+
+                visibility: visible!important;
+                display: inline-block!important;
+                font-weight: bold;
+                color: $primaryColor;
+                font-size:  1.6em;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    right: 30px;
+                }
+            }
+        }
+
+        section {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        &.active {
+            section {
+                height: 80vh;
+            }
+
+            .label::after {
+                content: '-';
+                height: 30px;
+            }
+        }
+
+        hr {
+            visibility: visible!important;
+            display: block!important;
+            width: 100;
+            margin: 0;
+          }
+    }
+
+    .preview-wrap {
+        height: 30px!important;
+
+        .preview {
+            display: none!important;        
+        }
+    }
+
+    .timecard {
+        top:30px!important;
+        left: 50%!important;
+        transform: translate(-50%, 0)!important;
+    }
+
+    .schedule-section {
+        height: 450px!important;
+    }
+}

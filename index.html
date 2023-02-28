@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forest Vacations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar-wrap">      
+      <nav class="navbar">
+        <a href="#">
+          <img class="logo" src="assets/treelogoPrimary.png" alt="Forest Vacations Logo" /> 
+          <span>ForestVacations</span>
+        </a>
+        <div class="nav-links">
+          <a href="#locations">1. LOCATIONS</a>
+          <a href="#vacation-packages">2. VACATION PACKAGES</a>
+        </div>
+      </nav>
+    </div>
+    <section class="hero">
+      <div class="intro-wrapper">
+        <h1>Ready for your next vacation?</h1>
+        <p>Just follow these two steps:</p>
+      </div>
+    </section>
+    <div class="sticky-nav">
+      <nav class="navbar">
+        <a href="#">
+          <img class="logo" src="assets/treelogoPrimary.png" alt="LA Mountains Logo" style="background-color: white; border-radius: 5px";/> 
+          <span>ForestVacations</span>
+        </a>
+        <div class="nav-links">
+          <a href="#locations">1. LOCATIONS</a>
+          <a href="#vacation-packages">2. VACATION PACKAGES</a>
+        </div>
+      </nav>
+    </div>
+    <div class="accordion">
+      <div class="accordion-element">
+        <hr>
+        <div class="label-wrapper">
+          <div class="label" onclick="accordionSelect(0)">
+            1. LOCATIONS
+          </div>
+        </div>
+        <section class="locations" id="locations">
+          <div class="locations-info">
+            <h1> 1.</h1>
+            <h2>Locations</h2>
+            <p>First, pick your location. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. </p>
+          </div>
+          <div class="carousel fade">
+              <!--images populated in javascript-->
+          </div>
+          <div class="preview-wrap">
+            <div class="preview">
+              <!--images populated in javascript-->
+            </div>
+            <div class="dot-container">        
+              <!--dots populated in javascript-->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="accordion-element">
+        <hr>
+        <div class="label-wrapper">
+          <div class="label" onclick="accordionSelect(1)">
+            2. VACATION PACKAGES
+          </div>
+        </div>
+        <section class="vacation-packages" id="vacation-packages">
+          <div class="vacation-packages-info">
+            <h1>2.</h1>
+            <h2>VACATION PACKAGES</h2>
+            <p>Second, pick your vacation package. You can see this season's schedules on the tabs below. After that, we'll do the rest. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.</p>
+          </div>
+          <div class="tabs">
+            <div class="tab-flex">
+              <div class="tab tab-selected" onclick="selectTab(0)">
+                Single Package
+              </div>
+              <div class="tab" onclick="selectTab(1)">
+                Family Package
+              </div>
+            </div>
+          </div>
+          <div class="schedule-section">
+            <div class="schedule">
+              <div class="max-width">
+                <div class="timecard">
+                  <h1>AVAILABLITY</h1>
+                  <div class="grid">
+                    <span>March 23rd</span>
+                    <span>Park 1</span>
+                    <span>April 3rd</span>
+                    <span>Park 2</span>
+                    <span>May 5th</span>
+                    <span>Park 3</span>
+                    <span>June 17th</span>
+                    <span>Park 4</span>
+                  </div>
+                </div>
+              </div>
+              <div class="img-wrap">
+                <img src="assets/woods4.jpg" />
+              </div>
+            </div>
+            <div class="schedule hidden">
+              <div class="max-width">
+                <div class="timecard">
+                  <h1>AVAILABLITY</h1>
+                  <div class="grid">
+                    <span>March 29th</span>
+                    <span>Park 1</span>
+                    <span>March 10th</span>
+                    <span>Park 2</span>
+                    <span>May 25th</span>
+                    <span>Park 3</span>
+                    <span>June 19th</span>
+                    <span>Park 4</span>
+                  </div>
+                </div>
+              </div>
+              <div class="img-wrap">
+                <img src="assets/woods5.jpg"/>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <hr>
+    </div>
+    <footer>
+      <div class="footer-wrap">
+        <img class="logo" src="assets/treelogoPrimary.png" alt="LA Mountains Logo" style="background-color: white; border-radius: 5px";/> 
+        <p class="copyright">COPYRIGHT 2023. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+	  <script src="index.js"></script>
+  </body>
+</html>
