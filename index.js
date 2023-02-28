@@ -1,3 +1,13 @@
+/****Preloader****/
+function loadAnimation(){
+    setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("preloader").style.display = "none";
+  document.getElementById("site-wrapper").style.display = "block";
+}
+
 /****Image Carousel****/
 //This function creates and maintains the automatic image carousel
 imageCarousel = (images) => {
